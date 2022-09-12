@@ -64,9 +64,9 @@ namespace AyCWeb.Controllers
         {
             
                 HttpRequestMessage requesting = new HttpRequestMessage(metodo, recurso);
-                string obtener_token = HttpContext.Session.GetInt32(Autenticado) == 1? HttpContext.Session.GetString(Token):"";
-                requesting.Headers.Add("Authorization", string.Concat("Bearer ", obtener_token.ToString().Replace('"', ' ').Trim()));
-                requesting.Properties.Add("Encoding", "UTF-8");
+              //  string obtener_token = HttpContext.Session.GetInt32(Autenticado) == 1? HttpContext.Session.GetString(Token):"";
+              //  requesting.Headers.Add("Authorization", string.Concat("Bearer ", obtener_token.ToString().Replace('"', ' ').Trim()));
+              //  requesting.Properties.Add("Encoding", "UTF-8");
                 /*obtener el request local*/
                 if (!string.IsNullOrEmpty(jsonstring))
                     requesting.Content = new StringContent(jsonstring.ToString().Replace('"', ' ').Trim(), Encoding.UTF8, "application/json");
