@@ -3,7 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
+	<ItemGroup>
+		<Frameworkreference Include="Microsoft.AspNetCore.App" Version="3.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\API_TEGRA\API_TEGRA.csproj" />
   </ItemGroup>

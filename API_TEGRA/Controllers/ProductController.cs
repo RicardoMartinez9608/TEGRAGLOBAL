@@ -93,5 +93,20 @@ namespace API_TEGRA.Controllers
             }
 
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Products()
+        {
+            try
+            {
+                List<Product> cita = _context.Products.AsNoTracking().ToList();
+                return Ok(cita);
+            }
+            catch (Exception e)
+            {
+                return await Task.Run(() => BadRequest());
+            }
+
+        }
     }
 }
